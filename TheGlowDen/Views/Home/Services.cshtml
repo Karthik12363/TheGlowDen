@@ -1,0 +1,121 @@
+﻿@model List<TheGlowDen.Models.ServiceModel>
+
+@{
+    ViewData["Title"] = "Our Services";
+}
+<div class="col-md-4">
+    <div class="service-card text-center">
+        <img src="/images/haircut.jpg" alt="Haircut" class="img-fluid">
+        <i class="fas fa-cut fa-4x mb-3"></i> <!-- Font Awesome icon -->
+        <h3>Haircut</h3>
+        <p>Modern, stylish haircuts for men and women.</p>
+    </div>
+</div>
+<section class="pricing py-5">
+    <div class="container text-center">
+        <h2 class="section-title">Our Pricing Plans</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h3>Basic</h3>
+                    <p>₹199.00</p>
+                    <ul>
+                        <li>Basic Haircut</li>
+                        <li>Simple Facial</li>
+                        <li>Standard Manicure</li>
+                    </ul>
+                    <a href="/Services" class="btn btn-gold">Book Now</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h3>Premium</h3>
+                    <p>₹299.00</p>
+                    <ul>
+                        <li>Premium Haircut</li>
+                        <li>Luxury Facial</li>
+                        <li>Premium Manicure & Pedicure</li>
+                    </ul>
+                    <a href="/Services" class="btn btn-gold">Book Now</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="pricing-card">
+                    <h3>Luxury</h3>
+                    <p>₹399.00</p>
+                    <ul>
+                        <li>Luxury Haircut</li>
+                        <li>Full Facial Treatment</li>
+                        <li>Luxury Manicure & Pedicure</li>
+                    </ul>
+                    <a href="/Services" class="btn btn-gold">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="offer-banner py-3 bg-warning text-white text-center">
+    <h3>Summer Special: 20% Off All Services!</h3>
+    <p>Book your appointment today and enjoy a beautiful glow at an affordable price.</p>
+    <a href="/Services" class="btn btn-gold">Book Now</a>
+</section>
+
+<section class="testimonials py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <p>"The best haircut I've ever had! Professional staff and beautiful ambiance. Highly recommend!"</p>
+                    <h5>John Doe</h5>
+                    <p>Haircut</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <p>"I loved the facial treatment! My skin has never felt so smooth and refreshed."</p>
+                    <h5>Jane Smith</h5>
+                    <p>Facial</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="testimonial-card">
+                    <p>"A great place for a manicure! Will definitely be coming back regularly."</p>
+                    <h5>Emily Johnson</h5>
+                    <p>Manicure</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="newsletter py-5 bg-dark text-white text-center">
+    <h3>Stay in the Glow!</h3>
+    <p>Sign up for our newsletter to get the latest beauty tips and special offers directly to your inbox.</p>
+    <form action="/Subscribe" method="POST">
+        <input type="email" class="form-control mb-2" placeholder="Enter your email" required>
+        <button type="submit" class="btn btn-gold">Subscribe</button>
+    </form>
+</section>
+
+
+@* 
+<h2>Our Services</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Service</th>
+            <th>Description</th>
+            <th>Price ($)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var service in Model)
+        {
+            <tr>
+                <td>@service.Name</td>
+                <td>@service.Description</td>
+                <td>@service.Price</td>
+            </tr>
+        }
+    </tbody>
+</table> *@

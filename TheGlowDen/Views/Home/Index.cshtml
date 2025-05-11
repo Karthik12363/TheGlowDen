@@ -1,0 +1,119 @@
+﻿@{
+    ViewData["Title"] = "Welcome to The Glow Den";
+}
+
+<div class="hero">
+    <div class="hero-content text-center">
+        <h1>Welcome to The Glow Den</h1>
+        <p class="caption">Elevate Your Everyday Look</p>
+        <a href="/Home/Services" class="btn btn-gold">Explore Our Services</a>
+    </div>
+</div>
+@* Auto scroll Images *@
+<section class="carousel-section my-5">
+    <div class="scroll-container d-flex" id="imageScroll" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="~/images/HomeScrolluniSexImage.jpg" class="d-block w-100" alt="Beauty 1">
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/HomeScrolluniSexImage.jpg" class="d-block w-100" alt="Beauty 2">
+            </div>
+            <div class="carousel-item">
+                <img src="~/images/HomeScrolluniSexImage.jpg" class="d-block w-100" alt="Beauty 3">
+            </div>
+        </div>
+        <button class="scroll-btn left" onclick="scrollImagesLeft()">
+            &#10094;
+        </button>
+        <button class="scroll-btn right" onclick="scrollImagesRight()">
+            &#10095;
+        </button>
+    </div>
+</section>
+@* Our Services For Gents And Ladies *@
+<section class="services-section my-5">
+    <div class="container text-center">
+        <h2 class="mb-4 section-title">Our Services</h2>
+
+        <div class="row">
+            <!-- Gents Section -->
+            <div class="col-md-6 mb-4">
+                <div class="service-card" style="background-image: url('@Url.Content("~/images/MenImage.jpg")');">
+                    <div class="overlay">
+                        <h4 class="service-title">Gents</h4>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ladies Section -->
+            <div class="col-md-6 mb-4">
+                <div class="service-card" style="background-image: url('@Url.Content("~/images/WomenImage.jpg")');">
+                    <div class="overlay">
+                        <h4 class="service-title">Ladies</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@* Book Appointment *@
+<section class="appointment-section py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="mb-4 section-title">Book Your Appointment</h2>
+        <form method="post" action="/Home/BookAppointment">
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <input type="text" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <input type="tel" class="form-control" placeholder="Phone Number" required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <select class="form-control" required>
+                        <option selected disabled>Service Type</option>
+                        <option>Haircut</option>
+                        <option>Facial</option>
+                        <option>Makeup</option>
+                    </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <input type="date" class="form-control" required>
+                </div>
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-gold px-4">Book Now</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
+@* Our Brand Details *@
+<footer class="bg-dark text-white text-center py-4">
+    <div class="container">
+        <h4>The Glow Den</h4>
+        <p>Elevate Your Everyday Look</p>
+        <div class="social-icons my-3">
+            <a href="https://www.instagram.com/yourbrand" class="text-white me-3"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="https://www.facebook.com/yourbrand" class="text-white me-3"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="https://www.twitter.com/yourbrand" class="text-white"><i class="fab fa-twitter fa-2x"></i></a>
+        </div>
+        <small>&copy; 2025 The Glow Den. All rights reserved.</small>
+    </div>
+</footer>
+
+<script>
+    var scrollImagesLeft =function () {
+        document.getElementById("imageScroll").scrollBy({
+            left: -300,
+            behavior: "smooth"
+        });
+    }
+
+    var scrollImagesRight = function () {
+        document.getElementById("imageScroll").scrollBy({
+            left: 300,
+            behavior: "smooth"
+        });
+    }
+</script>
